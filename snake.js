@@ -2,7 +2,7 @@ class Snake {
     constructor() {
         this.body = [];
         this.body[0] = createVector(0, 0);
-        this.xDirection = 0;
+        this.xDirection = 1;
         this.yDirection = 0;
 
     }
@@ -15,8 +15,12 @@ class Snake {
 
 
     show() {
-        
-        rect(30,30,30,30);
+        rect(this.body[0].x ,this.body[0].y ,40,40);
+    }
+
+    setDirection(x,y){
+        this.xDirection = x;
+        this.yDirection = y;
     }
 }
 
