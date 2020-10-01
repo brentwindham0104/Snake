@@ -1,17 +1,22 @@
 //const { DOWN_ARROW, RIGHT_ARROW, LEFT_ARROW } = require("./libraries/p5");
 
 let snake;
+// let rez = 20;
 
 function setup() {
-    createCanvas(400, 400);
+   createCanvas(400, 400);
+    background('red');
     snake = new Snake();
+    frameRate(10);
+    console.log("test");
   }
   
   function draw() {
-    background(51);
+    // scale(rez);
     snake.update();
     snake.show();
-    
+    console.log("test draw");
+
   }
 
 
