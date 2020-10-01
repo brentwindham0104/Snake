@@ -7,12 +7,17 @@ function setup() {
    createCanvas(400, 400);
     background('red');
     snake = new Snake();
-    frameRate(10);
+    frameRate(5);
     console.log("test");
+    snake.addFood();
   }
   
   function draw() {
     // scale(rez);
+    if (snake.isEating()) {
+      snake.moreFood();
+      console.log("More food please");
+    }
     snake.update();
     snake.show();
     console.log("test draw");
