@@ -1,7 +1,5 @@
-//const { DOWN_ARROW, RIGHT_ARROW, LEFT_ARROW } = require("./libraries/p5");
 
 let snake;
-// let rez = 20;
 
 function setup() {
    createCanvas(400, 400);
@@ -13,17 +11,14 @@ function setup() {
   }
   
   function draw() {
-    // scale(rez);
     if (snake.isEating()) {
-      snake.moreFood();
+      snake.nextFood();
       console.log("More food please");
     }
     snake.update();
     snake.show();
     console.log("test draw");
-
   }
-
 
   function keyPressed() {
     if (keyCode === DOWN_ARROW) {
