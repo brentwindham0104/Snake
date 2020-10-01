@@ -13,6 +13,7 @@ function setup() {
   function draw() {
     if (snake.isEating()) {
       snake.nextFood();
+      snake.addToTail();
       console.log("More food please");
     }
     snake.update();
