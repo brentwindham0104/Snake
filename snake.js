@@ -72,12 +72,25 @@ class Snake {
         return this.food.x == (this.body[0].x + this.xDirection)  && this.food.y == (this.body[0].y + this.yDirection);
     }
 
+    isGameEnded() {
+        let x = this.body[0].x;
+        let y = this.body[0].y;
+        for (var i = 1; i < this.body.length; i++) {
+            let part = this.body[i];
+            if (x == part.x && y == part.y){
+                return true;
+            }
+            
+        }
+        return false;
+    }
+
     nextFood() {
         this.food.x = 40 * floor(random(0,10));
         this.food.y = 40 * floor(random(0,10));
     }
 
-    addFood() {
+    addFoodToCanvas() {
         let c = color('blue');
         fill(c);
         rect(this.food.x, this.food.y, 40, 40);

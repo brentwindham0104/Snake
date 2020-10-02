@@ -7,10 +7,11 @@ function setup() {
     snake = new Snake();
     frameRate(5);
     console.log("test");
-    snake.addFood();
+    snake.addFoodToCanvas();
   }
   
   function draw() {
+
     if (snake.isEating()) {
       snake.nextFood();
       snake.addToTail();
@@ -19,6 +20,12 @@ function setup() {
     snake.update();
     snake.show();
     console.log("test draw");
+    if (snake.isGameEnded()){
+      console.log("GAME ENDED");
+      noLoop();
+    }
+
+    
   }
 
   function keyPressed() {
