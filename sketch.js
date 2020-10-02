@@ -3,7 +3,7 @@ let snake;
 
 function setup() {
    createCanvas(400, 400);
-    background('red');
+   //background(255);
     snake = new Snake();
     frameRate(5);
     console.log("test");

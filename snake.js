@@ -9,7 +9,7 @@ class Snake {
         this.head = createVector(0,0);
         this.head.x = 0;
         this.head.y = 0;
-        background('red');
+        background('#baed91');
         this.food = createVector(200,200);
         this.xDirection = 0;
         this.yDirection = 0;
@@ -52,8 +52,9 @@ class Snake {
     }
 
     show() {
-        background('red');
-        let c = color(255, 204, 0);
+        background(0);
+        let c = color('green');
+        //fea3aa
         fill(c);
         console.log("Right befroe creating rects there are supposed to be " + this.body.length + " number of rects");
 
@@ -91,7 +92,7 @@ class Snake {
     }
 
     addFoodToCanvas() {
-        let c = color('blue');
+        let c = color('red');
         fill(c);
         rect(this.food.x, this.food.y, 40, 40);
     }
