@@ -1,13 +1,20 @@
 
 let snake;
-
+let gridSize = 10;
 function setup() {
-   createCanvas(400, 400);
-   //background(255);
+   createCanvas(1000, 1000);
+   //background(153);
+   //background('#baed91');
+    for (let i = 0; i < 11; i++) {
+      line(100 * i, 0, 100 * i, 1000);
+      line(0, 100 * i, 1000, 100 * i);
+    }
+    
     snake = new Snake();
     frameRate(5);
     console.log("test");
-    snake.addFoodToCanvas();
+    //snake.addFoodToCanvas();
+  
   }
   
   function draw() {
@@ -21,7 +28,7 @@ function setup() {
     snake.show();
     console.log("test draw");
     if (snake.isGameEnded()){
-      console.log("GAME ENDED");
+       console.log("GAME ENDED");
       noLoop();
     }
 
@@ -29,13 +36,13 @@ function setup() {
   }
 
   function keyPressed() {
-    if (keyCode === DOWN_ARROW) {
-      snake.setDirection(0,1);
-    } else if (keyCode === UP_ARROW) {
-      snake.setDirection(0,-1);
-    } else if (keyCode === RIGHT_ARROW) {
-      snake.setDirection(1,0);
-    } else if (keyCode === LEFT_ARROW) {
-      snake.setDirection(-1,0);
-    }
+    // if (keyCode === DOWN_ARROW) {
+    //   snake.setDirection(0,1);
+    // } else if (keyCode === UP_ARROW) {
+    //   snake.setDirection(0,-1);
+    // } else if (keyCode === RIGHT_ARROW) {
+    //   snake.setDirection(1,0);
+    // } else if (keyCode === LEFT_ARROW) {
+    //   snake.setDirection(-1,0);
+    // }
   }
